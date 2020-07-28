@@ -1,25 +1,19 @@
 "use strict"
 
 //********************************
-//*** Función Arrow | Fat Arrow | Lambda
+//*** Eventos del mouse
 
-var saludar = nombre => "Hola " + nombre;
 
-console.log(saludar("Susana"));
+const boton = document.querySelector('.boton');
 
-var sumar = cantidad => cantidad + 10
-console.log(sumar(10));
+boton.addEventListener('click', function () {
+    console.log("El boton se ha pulsado");
+})
 
-var calcular = (datoA, datoB) => datoA + datoB
-console.log(calcular(10, 15));
+boton.addEventListener('mouseover', function () {
+    console.log("El mouse esta sobre el botón");
+})
 
-var generar = (datoA, datoB) => {
-    var datoC = 5;
-    return datoA + datoB + datoC;
-}
-console.log(generar(10, 15));
-
-var validar = () => {
-    return 'Validación correcta';
-}
-console.log(validar())
+boton.addEventListener('mouseout', function () {
+    console.log("El mouse esta fuera del botón");
+})
